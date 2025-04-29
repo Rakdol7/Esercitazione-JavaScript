@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h1>SOMMA DI DUE NUMERI</h1>
+        <p>Primo numero:</p>
+        <input type="text" name="primoNumero" id="idPrimo">
+        <p>+<br><br>Secondo numero:</p>
+        <input type="text" name="secondoNumero" id="idSecondo">
+        <p><br>Risultato:</p>
+        <input type="text" name="risultato" id="idRisultato">
+        <br><br>
+        <button type="button" onclick="SommaForm();">Esegui Somma</button>
+    </div>
+    <script>
+        function Somma(primo, secondo) {
+            return Number(primo) + Number(secondo);
+        }
+
+        function SommaForm() {
+            const primo = document.getElementById("idPrimo");
+            const secondo = document.getElementById("idSecondo");
+            const ris = document.getElementById("idRisultato");
+            const formula = Somma(primo.value, secondo.value);
+            ris.value = formula;
+        }
+    </script>
+</body>
+
+</html>

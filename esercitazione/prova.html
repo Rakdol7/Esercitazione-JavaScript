@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cornversione</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h1>Conversione tra gradi Celsius e gradi Farenheit</h1>
+        <p>Gradi Celsius:</p>
+        <input type="text" name="Celsius" id="idCelsius">
+        <p>Gradi Farenheit:</p>
+        <input type="text" name="Farenheit" id="idFarenheit"><br><br>
+        <button type="button" onclick="ConvertiForm();">Converti</button>
+        <br><br>
+        <button type="button" onclick="Inverti();">Cambia Verso</button>
+    </div>
+    <script>
+        let verso = true;
+
+        function Inverti() {
+            if(verso == true){
+                verso = false;
+            }
+            else {
+                verso = true;
+            }
+        }
+        
+        function ConvertiCelsius(gradi) {
+            return gradi * (9 / 5) + 32;
+        }
+
+        function ConvertiFare(gradi){
+            return (gradi-32)*(5/9);
+        }
+
+        function ConvertiForm() {
+            const cel = document.getElementById("idCelsius");
+            const far = document.getElementById("idFarenheit");
+            
+            if(verso == true){
+                const formula = ConvertiCelsius(cel.value);
+                far.value = formula;
+            }
+            else {
+                const formula = ConvertiFare(far.value);
+                cel.value = formula;
+            }
+        }
+    </script>
+</body>
+
+</html>

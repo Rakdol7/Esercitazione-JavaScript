@@ -1,0 +1,22 @@
+h1 {
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 50px;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+div {
+    text-align: center;
+    margin-top: 10%;
+}
+
+input {
+    text-align: center;
+}
+
+button {
+    background-color: lightgreen;
+}
